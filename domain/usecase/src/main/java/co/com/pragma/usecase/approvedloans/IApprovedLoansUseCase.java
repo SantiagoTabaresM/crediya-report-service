@@ -7,10 +7,7 @@ public interface IApprovedLoansUseCase {
 
     Mono<ApprovedLoans> getTotalApprovedLoans ();
 
-    Mono<ApprovedLoans> getTotalApprovedAmount();
+    Mono<Void> incrementApprovedLoans();
 
-    Mono<Void> incrementApprovedLoansCount();
-
-    Mono<Void> incrementApprovedAmount(Long amount);
 
 }

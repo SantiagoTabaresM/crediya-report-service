@@ -1,8 +1,9 @@
 package co.com.pragma.api.dto;
 
-public record ApprovedLoansCountDTO(
+public record ApprovedLoansDTO(
     String id,
     Integer totalCount,
-    Long totalAmount
+    Long totalAmount,
+    String lastUpdated
 ) {
 }

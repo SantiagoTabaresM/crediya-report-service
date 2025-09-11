@@ -7,7 +7,4 @@ public interface ApprovedLoansRepository {
 
     Mono<ApprovedLoans> getApprovedLoans (String id);
 
-   // Mono<Void> incrementApprovedLoans();
-
-
 }

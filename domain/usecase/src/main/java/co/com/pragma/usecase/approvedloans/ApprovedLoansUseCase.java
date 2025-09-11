@@ -12,21 +12,13 @@ public class ApprovedLoansUseCase implements IApprovedLoansUseCase {
 
     @Override
     public Mono<ApprovedLoans> getTotalApprovedLoans() {
-        return approvedLoansRepository.getApprovedLoans("REPORT");
+        return approvedLoansRepository.getApprovedLoans("APPROVED_REPORT");
     }
 
+
     @Override
-    public Mono<ApprovedLoans> getTotalApprovedAmount() {
+    public Mono<Void> incrementApprovedLoans() {
         return null;
     }
 
-    @Override
-    public Mono<Void> incrementApprovedLoansCount() {
-        return null;
-    }
-
-    @Override
-    public Mono<Void> incrementApprovedAmount(Long amount) {
-        return null;
-    }
 }
