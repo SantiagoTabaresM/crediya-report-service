@@ -7,4 +7,6 @@ public interface ApprovedLoansRepository {
 
     Mono<ApprovedLoans> getApprovedLoans (String id);
 
+    Mono<ApprovedLoans> updateApprovedLoans(ApprovedLoans approvedLoans);
+
 }

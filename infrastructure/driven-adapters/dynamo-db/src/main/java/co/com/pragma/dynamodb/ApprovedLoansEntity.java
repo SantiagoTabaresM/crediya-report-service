@@ -8,13 +8,13 @@ public class ApprovedLoansEntity {
 
     private String id;
     private String lastUpdated;
-    private Integer totalAmount;
+    private Double totalAmount;
     private Integer totalCount;
 
 
     public ApprovedLoansEntity() {}
 
-    public ApprovedLoansEntity(String id, String lastUpdated, Integer totalAmount, Integer totalCount) {
+    public ApprovedLoansEntity(String id, String lastUpdated, Double totalAmount, Integer totalCount) {
         this.id = id;
         this.lastUpdated = lastUpdated;
         this.totalAmount = totalAmount;
@@ -40,10 +40,10 @@ public class ApprovedLoansEntity {
     }
 
     @DynamoDbAttribute("total_amount")
-    public Integer getTotalAmount() {
+    public Double getTotalAmount() {
         return totalAmount;
     }
-    public void setTotalAmount(Integer totalAmount) {
+    public void setTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
     }
 

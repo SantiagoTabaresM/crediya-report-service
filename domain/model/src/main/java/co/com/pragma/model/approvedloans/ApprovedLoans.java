@@ -13,6 +13,6 @@ import lombok.Setter;
 public class ApprovedLoans {
     private String id;
     private Integer totalCount;
-    private Integer totalAmount;
+    private Double totalAmount;
     private String lastUpdated;
 }

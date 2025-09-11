@@ -7,11 +7,6 @@ import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.stereotype.Repository;
 import reactor.core.publisher.Mono;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedAsyncClient;
-import software.amazon.awssdk.enhanced.dynamodb.Key;
-import software.amazon.awssdk.enhanced.dynamodb.model.QueryConditional;
-import software.amazon.awssdk.enhanced.dynamodb.model.QueryEnhancedRequest;
-
-import java.util.List;
 
 
 @Repository
@@ -31,6 +26,11 @@ public class DynamoDBTemplateAdapter
     @Override
     public Mono<ApprovedLoans> getApprovedLoans(String id){
         return super.getById(id);
+    }
+
+    @Override
+    public Mono<ApprovedLoans> updateApprovedLoans(ApprovedLoans approvedLoans) {
+        return super.update(approvedLoans);
     }
 
 }
