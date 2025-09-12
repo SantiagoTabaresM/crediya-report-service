@@ -19,8 +19,7 @@ spring:
           client-id: "myclientid"
 routes:
   paths:
-    approvedLoansCount: "/api/v1/report/count"
-    approvedLoansAmount: "/api/v1/report/amount"
+    approvedLoansReport: "/api/v1/report"
 aws:
   dynamodb:
     region: "us-east-1"

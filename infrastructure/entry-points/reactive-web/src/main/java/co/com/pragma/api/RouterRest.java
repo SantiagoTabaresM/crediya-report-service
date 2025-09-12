@@ -28,7 +28,7 @@ public class RouterRest {
 
     private final ApprovedLoansPath approvedLoansPath;
     private final ApprovedLoanHandler approvedLoanHandler;
-    private static final String LOAN_APPLICATION_COUNT = "/api/v1/report/count";
+    private static final String LOAN_APPLICATION_COUNT = "/api/v1/report";
 
     @Bean
     @RouterOperations({
@@ -48,6 +48,6 @@ public class RouterRest {
             )
     })
     public RouterFunction<ServerResponse> routerFunction(ApprovedLoanHandler approvedLoanHandler ) {
-        return route(GET(approvedLoansPath.getApprovedLoansCount()), approvedLoanHandler::listenGetApprovedLoans);
+        return route(GET(approvedLoansPath.getApprovedLoansReport()), approvedLoanHandler::listenGetApprovedLoans);
     }
 }

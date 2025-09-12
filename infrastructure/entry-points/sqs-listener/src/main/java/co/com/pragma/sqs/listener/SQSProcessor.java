@@ -25,7 +25,6 @@ public class SQSProcessor implements Function<Message, Mono<Void>> {
     @Override
     public Mono<Void> apply(Message message) {
         log.info("Message received: {}", message.body());
-
         return Mono.fromCallable(() -> objectMapper.readValue(message.body(), ApprovedLoanMessage.class))
                 .subscribeOn(Schedulers.boundedElastic())
                 .flatMap(pm -> approvedLoansUseCase.incrementApprovedLoans(pm.amount()));

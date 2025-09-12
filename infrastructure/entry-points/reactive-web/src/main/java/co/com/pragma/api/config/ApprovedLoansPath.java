@@ -8,6 +8,5 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Setter
 @ConfigurationProperties(prefix = "routes.paths")
 public class ApprovedLoansPath {
-    private String approvedLoansCount;
-    private String approvedLoansAmount;
+    private String approvedLoansReport;
 }
