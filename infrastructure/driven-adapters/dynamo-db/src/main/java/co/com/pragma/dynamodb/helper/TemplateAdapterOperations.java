@@ -49,6 +49,12 @@ public abstract class TemplateAdapterOperations<E, K, V> {
                 .map(this::toModel);
     }
 
+    public Mono<E> update(E model) {
+        return Mono.fromFuture(table.updateItem(toEntity(model)))
+                .map(this::toModel);
+    }
+
+
     public Mono<E> delete(E model) {
         return Mono.fromFuture(table.deleteItem(toEntity(model))).map(this::toModel);
     }
