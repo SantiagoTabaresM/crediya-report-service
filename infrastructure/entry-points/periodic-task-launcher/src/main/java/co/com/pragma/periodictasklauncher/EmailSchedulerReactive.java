@@ -30,7 +30,7 @@ public class EmailSchedulerReactive {
 
     private static final String REPORT_RECIPIENT = "samoralesta@gmail.com";
     private static final String REPORT_SENDER = "satabaresmo@gmail.com";
-    private static final LocalTime RUN_AT = LocalTime.of(8, 0); // 8:00 AM
+    private static final LocalTime RUN_AT = LocalTime.of(19, 32); // 8:00 AM
     private static final DateTimeFormatter DATE_FORMATTER =
             DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 

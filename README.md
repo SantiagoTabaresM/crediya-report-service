@@ -58,3 +58,7 @@ total_amount: Monto total acumulado de los préstamos aprobados.
 
 3. La información almacenada puede ser consultada desde la API para generar reportes consolidados.
 
+# Reporte automatizado
+El microservicio incluye una funcionalidad para generar y enviar automáticamente un reporte consolidado de préstamos aprobados a una dirección de correo electrónico específica. Este proceso se realiza diariamente a las 8:00 AM y utiliza SES para el envío del correo.
+
+![CrediYa](docs/reportAutomatic.png)
